@@ -16,8 +16,8 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.persistence.TypedQuery"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
-<fullyQualifiedTypeName name="model.ListItem"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="model.CoinConverter"/>
 <fullyQualifiedTypeName name="model.TemperatureConverter"/>
+<fullyQualifiedTypeName name="model.ListItem"/>
 </qualifiedTypeNameHistroy>
