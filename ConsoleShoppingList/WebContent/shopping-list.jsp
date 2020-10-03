@@ -5,9 +5,22 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>This thing</title>
 </head>
 <body>
-
+<form method = "post" action = "navigationServlet">
+<table>
+	<c:forEach items="${requestScope.allItems}" var="currentitem">
+		<tr>
+			<td><input type="radio" name="id" value="${currentitem.id}"></td>
+			<td>${currentitem.store}</td>
+			<td>${currentitem.item}</td>
+		</tr>
+	</c:forEach>
+</table>
+<input type = "submit" value = "edit" name = "doThisToItem">
+<input type = "submit" value = "delete" name = "doThisToItem">
+<input type = "submit" value = "add" name = "doThisToItem">
+</form>
 </body>
 </html>
