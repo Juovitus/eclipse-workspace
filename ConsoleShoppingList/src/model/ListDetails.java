@@ -42,13 +42,8 @@ public class ListDetails {
 	
 	public ListDetails() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
-	
-	
-
-
 	public ListDetails(int id, String listName, LocalDate tripDate, Shopper shopper, List<ListItem> listOfItems) {
 		super();
 		this.id = id;
@@ -72,7 +67,6 @@ public class ListDetails {
 		this.tripDate = tripDate;
 		this.shopper = shopper;
 	}
-
 
 	public int getId() {
 		return id;
@@ -99,25 +93,18 @@ public class ListDetails {
 		this.shopper = shopper;
 	}
 
-
 	public List<ListItem> getListOfItems() {
 		return listOfItems;
 	}
 
-
 	public void setListOfItems(List<ListItem> listOfItems) {
 		this.listOfItems = listOfItems;
 	}
-
 
 	@Override
 	public String toString() {
 		return "ShoppingListDetails [id=" + id + ", ListName=" + listName + ", tripDate=" + tripDate + ", shopper="
 				+ shopper + ", listOfItems=" + listOfItems + "]";
 	}
-
-
-	
-
 	
 }
