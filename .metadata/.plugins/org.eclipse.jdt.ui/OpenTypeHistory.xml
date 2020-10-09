@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=ConsoleShoppingList/src=/optional=/true=/=/maven.pomderived=/true=/&lt;model{Shopper.java[Shopper" modifiers="1" timestamp="1602054851129"/>
-<typeInfo handle="=ConsoleShoppingList/src=/optional=/true=/=/maven.pomderived=/true=/&lt;model{ListDetails.java[ListDetails" modifiers="1" timestamp="1602098283579"/>
+<typeInfo handle="=ConsoleShoppingList/src=/optional=/true=/=/maven.pomderived=/true=/&lt;model{ListDetails.java[ListDetails" modifiers="1" timestamp="1602201278093"/>
 <typeInfo handle="=ConsoleShoppingList/src=/optional=/true=/=/maven.pomderived=/true=/&lt;controller{LocalDateAttributeConverter.java[LocalDateAttributeConverter" modifiers="1" timestamp="1602095255006"/>
+<typeInfo handle="=ConsoleCarDealer/src=/optional=/true=/=/maven.pomderived=/true=/&lt;model{Shopper.java[Shopper" modifiers="1" timestamp="1602189424218"/>
+<typeInfo handle="=ConsoleCarDealer/src=/optional=/true=/=/maven.pomderived=/true=/&lt;model{ListDetails.java[ListDetails" modifiers="1" timestamp="1602200246527"/>
+<typeInfo handle="=ConsoleCarDealer/src=/optional=/true=/=/maven.pomderived=/true=/&lt;controller{LocalDateAttributeConverter.java[LocalDateAttributeConverter" modifiers="1" timestamp="1602200727007"/>
 </typeInfoHistroy>
