@@ -14,6 +14,7 @@ public class BeanConfiguration {
 		bean.setName("Dr. Seuss");
 		bean.setPhone("555-555-5555");
 		bean.setRelationship("friend");
+		address();
 		return bean;
 	}
 	

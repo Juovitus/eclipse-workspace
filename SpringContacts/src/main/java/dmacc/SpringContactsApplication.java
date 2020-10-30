@@ -16,32 +16,32 @@ import dmacc.controller.BeanConfiguration;
 import dmacc.repository.ContactRepository;
 
 @SpringBootApplication
-public class SpringContactsApplication implements CommandLineRunner {
+public class SpringContactsApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringContactsApplication.class, args);
-		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
-		Contact c = appContext.getBean("contact", Contact.class);
-		System.out.println(c.toString());
+//		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
+//		Contact c = appContext.getBean("contact", Contact.class);
+//		System.out.println(c.toString());
 	}	
 	
-	@Autowired
-	ContactRepository repo;
-
-	@Override
-	public void run(String... args) throws Exception {
-		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
-		Contact c = appContext.getBean("contact", Contact.class);
-		c.setRelationship("best friend");
-		repo.save(c);
-		Contact d = new Contact("Sandra Boynton", "555-555-5557", "friend");
-		Address a = new Address("123 Main Street", "Des Moines", "IA");
-		d.setAddress(a);
-		repo.save(d);
-		List<Contact> allMyContacts = repo.findAll();
-		for(Contact people: allMyContacts) {
-			System.out.println(people.toString());
-		}
-		((AbstractApplicationContext) appContext).close();
-	}
+//	@Autowired
+//	ContactRepository repo;
+//
+//	
+//	public void run(String... args) throws Exception {
+//		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
+//		Contact c = appContext.getBean("contact", Contact.class);
+//		c.setRelationship("best friend");
+//		repo.save(c);
+//		Contact d = new Contact("Sandra Boynton", "555-555-5557", "friend");
+//		Address a = new Address("123 Main Street", "Des Moines", "IA");
+//		d.setAddress(a);
+//		repo.save(d);
+//		List<Contact> allMyContacts = repo.findAll();
+//		for(Contact people: allMyContacts) {
+//			System.out.println(people.toString());
+//		}
+//		((AbstractApplicationContext) appContext).close();
+//	}
 }

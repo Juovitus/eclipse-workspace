@@ -4,14 +4,23 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class Address {
+	//Variables
 	private String street;
 	private String city;
 	private String state;
 	
+	//Constructors
 	public Address() {
-		super();
+		
 	}
 	
+	public Address(String street, String city, String state) {
+		this.state = state;
+		this.street = street;
+		this.city = city;
+	}
+
+	//Getters and setters
 	public String getStreet() {
 		return street;
 	}
@@ -35,13 +44,9 @@ public class Address {
 	public void setState(String state) {
 		this.state = state;
 	}
-
-	public Address(String street, String city, String state) {
-
-	}
 	
 	@Override
 	public String toString() {
-		return "Address [street=" + street + ", city=" + city + ", state=" + state + "]";
+		return "Address [street=" + street + ", city=" + city + ", state=" + state+ "]";
 	}
 }

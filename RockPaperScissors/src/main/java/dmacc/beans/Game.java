@@ -10,48 +10,58 @@ import lombok.NoArgsConstructor;
 public class Game {
 	private String player1;
 	private String computerPlayer;
-	private String winner;
+	private String winner = "noot";
 	
 	public Game(String player1) {
 		super();
 		this.player1 = player1;
-		this.setComputerPlayerToRandom();
-		this.determineWinner();
+		setComputerPlayerToRandom();
+		determineWinner();
 	}
 	
 	String setComputerPlayerToRandom(){
 		Random ran = new Random();
-		int numChoice = ran.nextInt(2);
+		int numChoice = ran.nextInt(3);
 		System.out.println(numChoice);
-		switch(numChoice) {
-		case 0:
+		if(numChoice == 0) {
 			computerPlayer = "rock";
-		case 1:
+		}else if(numChoice == 1) {
 			computerPlayer = "paper";
-		case 2:
+		}else if(numChoice == 2) {
 			computerPlayer = "scissors";
+		}else {
+			computerPlayer = "how";
 		}
 		return computerPlayer;
 	}
 	
 	String determineWinner() {
 		if(computerPlayer == winner ) {
-			winner = "Tie!";
-		}else if(computerPlayer == "rock" && player1 == "paper") {
-			winner = "Player wins!";
-		}else if(computerPlayer == "rock" && player1 == "scissors") {
-			winner = "Computer wins!";
-		}else if(computerPlayer == "paper" && player1 == "scissors") {
-			winner = "Player wins!";
-		}else if(computerPlayer == "paper" && player1 == "rock") {
-			winner = "Computer wins!";
-		}else if(computerPlayer == "scissors" && player1 == "rock") {
-			winner = "Player wins!";
-		}else if(computerPlayer == "scissors" && player1 == "paper") {
-			winner = "Computer wins!";
-		}else {
-			winner = "How did this happen";
+			this.winner = "Tie!";
 		}
+		if(computerPlayer == "rock") {
+			if(player1 == "paper") {
+				this.winner = "Player wins!";
+			}else if(player1 == "scissors") {
+				this.winner = "Computer wins!";
+			}
+		}else if(computerPlayer == "paper") {
+			if(player1 == "scissors") {
+				this.winner = "Player wins!";
+			}else if(player1 == "rock") {
+				this.winner = "Computer wins!";
+			}
+		}else if(computerPlayer == "scissors") {
+			if(player1 == "rock") {
+				this.winner = "Player wins!";
+			}else if(player1 == "paper") {
+				this.winner = "Computer wins!";
+			}
+		}
+		
+		System.out.println(winner);
+		System.out.println(player1);
+		System.out.println(computerPlayer);
 		return winner;
 	}
 }
