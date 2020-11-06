@@ -13,35 +13,35 @@ import org.springframework.context.support.AbstractApplicationContext;
 import dmacc.beans.Address;
 import dmacc.beans.Computer;
 import dmacc.controller.BeanConfiguration;
-import dmacc.repository.ContactRepository;
+import dmacc.repository.ComputerRepository;
 
 @SpringBootApplication
-public class SpringComputersApplication implements CommandLineRunner {
+public class SpringComputersApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringComputersApplication.class, args);
-		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
-		Computer c = appContext.getBean("computer", Computer.class);
-		System.out.println(c.toString());
+//		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
+//		Computer c = appContext.getBean("computer", Computer.class);
+//		System.out.println(c.toString());
 	}	
 	
-	@Autowired
-	ContactRepository repo;
-
-	@Override
-	public void run(String... args) throws Exception {
-		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
-		Computer c = appContext.getBean("computer", Computer.class);
-		c.setPart("MOBO");
-		repo.save(c);
-		Computer d = new Computer("Intel", "555-555-5557", "RAM");
-		Address a = new Address("123 Main Street", "Des Moines", "IA");
-		d.setAddress(a);
-		repo.save(d);
-		List<Computer> allMyComputers = repo.findAll();
-		for(Computer comp: allMyComputers) {
-			System.out.println(comp.toString());
-		}
-		((AbstractApplicationContext) appContext).close();
-	}
+//	@Autowired
+//	ContactRepository repo;
+//
+//	@Override
+//	public void run(String... args) throws Exception {
+//		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
+//		Computer c = appContext.getBean("computer", Computer.class);
+//		c.setPart("MOBO");
+//		repo.save(c);
+//		Computer d = new Computer("Intel", "555-555-5557", "RAM");
+//		Address a = new Address("123 Main Street", "Des Moines", "IA");
+//		d.setAddress(a);
+//		repo.save(d);
+//		List<Computer> allMyComputers = repo.findAll();
+//		for(Computer comp: allMyComputers) {
+//			System.out.println(comp.toString());
+//		}
+//		((AbstractApplicationContext) appContext).close();
+//	}
 }

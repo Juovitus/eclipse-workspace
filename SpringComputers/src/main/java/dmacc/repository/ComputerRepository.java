@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import dmacc.beans.Computer;
 
 @Repository
-public interface ContactRepository extends
+public interface ComputerRepository extends
 JpaRepository<Computer, Long> { }
 

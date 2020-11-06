@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert New or Edit Computer</title>
+</head>
+<body>
+<form th:object="${newComputer}" th:action="@{/update/{id}(id=${newComputer.id})}" method=POST>
+Manufacturer: <input name="manufacturer" size="20" th:field="*{manufacturer}"><br />
+Part: <input name="part" size="20" th:field="*{part}"><br />
+Phone Number: <input name="phone" size="20" th:field="*{phone}"><br />
+Street: <input name="address.street" size="20" th:field="*{address.street}"><br />
+City: <input name="address.city" size="20" th:field="*{address.city}"><br />
+State: <input name="address.state" size="20" th:field="*{address.state}"><br />
+
+<input name="Submit" type="submit" value="submit" />
+</form>
+<a href="../viewAll">View All Computers</a>
+
+</body>
+</html>
