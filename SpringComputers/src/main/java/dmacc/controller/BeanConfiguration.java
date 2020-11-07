@@ -19,7 +19,7 @@ public class BeanConfiguration {
 	
 	@Bean
 	public Address address() {
-		Address bean = new Address("123 Main Street", "Des Moines", "IA");
+		Address bean = new Address();
 		return bean;
 	}
 }
